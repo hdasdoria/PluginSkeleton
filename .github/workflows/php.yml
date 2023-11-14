@@ -88,10 +88,7 @@ jobs:
         
             - 
                 name: Run ECS
-                uses: pietrzakadrian/easy-coding-standard-github-action@v2.0.5
-                with:
-                  config: ecs.php #configuration file
-                  directories: src tests #list of directories to check (optional)
+                run: vendor/bin/ecs check --config=ecs.php --clear-cache src tests
 
             -
                 name: Run PHPStan
